@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import NavBar from "../components/NavBar.astro"
 import "../styles/global.css"
+import MainButtonZone from "../components/MainButtonZone.tsx"
 ---
 
 <Layout>
@@ -10,9 +11,11 @@ import "../styles/global.css"
   </header>
   
   <main class="w-full h-screen flex justify-center items-center">
+
     
+    <MainButtonZone client:load />
     <div>
-      <p>Ahora estoy en el centro absoluto de la pantalla.</p>
+      <p>Shit i hate.</p>
     </div>
 
   </main>
