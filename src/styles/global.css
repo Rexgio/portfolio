@@ -4,7 +4,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
 @theme inline {
+  --font-mono: "Geist Mono", "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --color-tokyo-bgDark: #1A1B26;
   --font-mono: "Hack Nerd Font", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --icon-size-md: 24px;
@@ -127,14 +129,6 @@
   }
 }
 
-@font-face {
-  font-family: 'Hack Nerd Font';
-  /* La ruta empieza con slash porque está en la carpeta public */
-  src: url('../public/fonts/HackNerdFont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; /* Importante para el rendimiento */
-}
 
 /* Opcional: clase para que los iconos se alineen siempre bien con el texto */
 @layer components {

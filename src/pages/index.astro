@@ -1,22 +1,96 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import NavBar from "../components/NavBar.astro"
-import "../styles/global.css"
-import MainButtonZone from "../components/MainButtonZone.tsx"
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/NavBar.astro";
+import "../styles/global.css";
+import MainButtonZone from "../components/MainButtonZone.astro";
+import BottomBar from "../components/BottomBar.astro";
+const asciiArt = `  ██████ ▓█████  ██▀███    ▄████  ██▓ ▒█████      ██▀███   ▒█████  ▓█████▄  ██▀███   ██▓  ▄████  █    ██ ▓█████ ▒███████▒
+▒██    ▒ ▓█   ▀ ▓██ ▒ ██▒ ██▒ ▀█▒▓██▒▒██▒  ██▒   ▓██ ▒ ██▒▒██▒  ██▒▒██▀ ██▌▓██ ▒ ██▒▓██▒ ██▒ ▀█▒ ██  ▓██▒▓█   ▀ ▒ ▒ ▒ ▄▀░
+░ ▓██▄   ▒███   ▓██ ░▄█ ▒▒██░▄▄▄░▒██▒▒██░  ██▒   ▓██ ░▄█ ▒▒██░  ██▒░██   █▌▓██ ░▄█ ▒▒██▒▒██░▄▄▄░▓██  ▒██░▒███   ░ ▒ ▄▀▒░ 
+  ▒   ██▒▒▓█  ▄ ▒██▀▀█▄  ░▓█  ██▓░██░▒██   ██░   ▒██▀▀█▄  ▒██   ██░░▓█▄   ▌▒██▀▀█▄  ░██░░▓█  ██▓▓▓█  ░██░▒▓█  ▄   ▄▀▒   ░
+▒██████▒▒░▒████▒░██▓ ▒██▒░▒▓███▀▒░██░░ ████▓▒░   ░██▓ ▒██▒░ ████▓▒░░▒████▓ ░██▓ ▒██▒░██░░▒▓███▀▒▒▒█████▓ ░▒████▒▒███████▒
+▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒▓ ░▒▓░ ░▒   ▒ ░▓  ░ ▒░▒░▒░    ░ ▒▓ ░▒▓░░ ▒░▒░▒░  ▒▒▓  ▒ ░ ▒▓ ░▒▓░░▓   ░▒   ▒ ░▒▓▒ ▒ ▒ ░░ ▒░ ░░▒▒ ▓░▒░▒
+░ ░▒  ░ ░ ░ ░  ░  ░▒ ░ ▒░  ░   ░  ▒ ░  ░ ▒ ▒░      ░▒ ░ ▒░  ░ ▒ ▒░  ░ ▒  ▒   ░▒ ░ ▒░ ▒ ░  ░   ░ ░░▒░ ░ ░  ░ ░  ░░░▒ ▒ ░ ▒
+░  ░  ░     ░     ░░   ░ ░ ░   ░  ▒ ░░ ░ ░ ▒       ░░   ░ ░ ░ ░ ▒   ░ ░  ░   ░░   ░  ▒ ░░ ░   ░  ░░░ ░ ░    ░   ░ ░ ░ ░ ░
+      ░     ░  ░   ░           ░  ░      ░ ░        ░         ░ ░     ░       ░      ░        ░    ░        ░  ░  ░ ░      `;
 ---
 
 <Layout>
   <header class="absolute top-0 left-0 w-full z-10">
-    <NavBar title="portfolio"/>
+    <NavBar title="portfolio" />
   </header>
-  
+
   <main class="w-full h-screen flex justify-center items-center">
+    <div class="inline justify-center items-center w-2/5 mb-24">
+      <div class="mb-5 flex justify-center w-full">
+        <pre
+          class="font-mono text-[1vw] md:text-[0.8vw] lg:text-[0.6vw] leading-[1] whitespace-pre text-[#9ECE6A] select-none antialiased">
+{asciiArt}
+        </pre>
+      </div>
+      <div class="grid grid-cols-13 gap-4 mr-2 ml-2">
+        <div class="col-span-4">
+          <MainButtonZone
+            client:load
+            color="#F7768E"
+            buttonId="btn-contact"
+            name="contact me"
+            description="contact me: contact@sergiorod.com"
+            icon="mdi:email-outline"
+            hoverIcon="mdi:email-open"
+          />
+        </div>
 
-    
-    <MainButtonZone client:load />
-    <div>
-      <p>Shit i hate.</p>
+        <div class="col-span-4">
+          <MainButtonZone
+            client:load
+            color="#9ECE6A"
+            buttonId="btn-projects"
+            name="projects"
+            description="open projects."
+            icon="mdi:rocket"
+            hoverIcon="mdi:rocket-launch"
+          />
+        </div>
+
+        <div class="col-span-2">
+          <MainButtonZone
+            client:load
+            color="#E0AF68"
+            buttonId="btn-blog"
+            name="blog"
+            description="open blog."
+            icon="mdi:book-education-outline"
+            hoverIcon="mdi:book-open-page-variant-outline"
+          />
+        </div>
+
+        <div class="col-span-3">
+          <MainButtonZone
+            client:load
+            color="#7AA2F7"
+            buttonId="btn-other"
+            name="other"
+            icon="mdi:blinky"
+            hoverIcon="mdi:external-link"
+            description="bonus info."
+          />
+        </div>
+      </div>
+      <div>
+        <p>Shit i hate.</p>
+      </div>
     </div>
-
+    <BottomBar />
   </main>
 </Layout>
+
+<script>
+  let touch = document.getElementById("button");
+
+  if (touch) {
+    touch.addEventListener("click", () => {
+      console.log("A");
+    });
+  }
+</script>
