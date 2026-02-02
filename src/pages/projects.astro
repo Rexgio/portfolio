@@ -37,23 +37,45 @@ const ascii = `
       <div
         class="font-mono grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 w-full"
       >
-        <a
-          href="/projects/CCApp"
-          class="flex flex-col h-42 border-[#9777D0] border-2 rounded-lg bg-neutral-200 dark:bg-tokyo-bgDark hover:opacity-80 hover:dark:bg-neutral-900 hover:bg-neutral-400 duration-300 ease-out p-4"
+        <div
+          class="relative group flex flex-col h-42 border-[#9777D0] border-2 rounded-lg bg-neutral-200 dark:bg-tokyo-bgDark hover:bg-neutral-300 dark:hover:bg-neutral-900 duration-300 ease-out p-4"
         >
-          <p class="font-[900] text-[#F7768E] mb-1">CCApp</p>
+          <p class="font-[900] text-[#F7768E] mb-1">
+            <a
+              href="/projects/CCApp"
+              class="after:absolute after:inset-0 after:z-0"
+            >
+              CCApp
+            </a>
+          </p>
 
           <div class="w-1/5 mb-2">
             <hr class="border-[#9777D0] opacity-30" />
           </div>
 
-          <p class="text-sm">Simple gestion app for spanish brotherhoods.</p>
+          <p class="text-sm z-10 pointer-events-none">
+            Simple gestion app for spanish brotherhoods.
+          </p>
 
-          <div class="flex gap-4 mt-auto text-xs font-bold text-[#7AA2F7]">
-            <span class="underline decoration-dotted">Google Play.</span>
-            <span class="underline decoration-dotted">Apple Store.</span>
+          <div
+            class="flex gap-4 mt-auto text-xs font-bold text-[#7AA2F7] relative z-20"
+          >
+            <a
+              href="https://play.google.com/store/apps/details?id=com.forclus.Vigias&hl=es_419"
+              target="_blank"
+              class="underline decoration-dotted hover:text-[#9ECE6A] transition-colors"
+            >
+              Google Play.
+            </a>
+            <a
+              href="https://apps.apple.com/es/app/vigias-app/id6751107978"
+              target="_blank"
+              class="underline decoration-dotted hover:text-[#9ECE6A] transition-colors"
+            >
+              Apple Store.
+            </a>
           </div>
-        </a>
+        </div>
       </div>
     </div>
     <BottomBar />
