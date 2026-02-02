@@ -1,23 +1,22 @@
 ---
 const { title } = Astro.props;
 
-// Lógica: Si el título es "home", vamos a la raíz "/", si no, a "/titulo"
 const finalHref = title === "home" ? "/" : `/${title}`;
 ---
 
 <div class={`${!title ? "invisible" : ""} flex items-center`}>
   <a
     href={finalHref}
-    class="flex items-center gap-1 text-[#e3e3e3] hover:opacity-70 transition-opacity"
+    class="flex items-center text-[#7AA2F7] hover:opacity-70 transition-opacity"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="24px"
+      height="20px"
       viewBox="0 -960 960 960"
-      width="24px"
-      fill="currentColor"
+      width="20px"
+      fill="#7AA2F7"
       ><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"></path></svg
     >
-    <span class="font-mono font-bold uppercase">{title}</span>
+    <span class="font-mono font-bold underline mr-[-2px]">{title}</span>
   </a>
 </div>

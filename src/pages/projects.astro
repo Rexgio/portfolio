@@ -3,17 +3,59 @@ import Layout from "../layouts/Layout.astro";
 import NavBar from "../components/NavBar.astro";
 import "../styles/global.css";
 import BottomBar from "../components/BottomBar.astro";
+import { Separator } from "@/components/ui/separator.tsx";
+
+const ascii = `                                                                               
+@@@@@@@   @@@@@@@    @@@@@@        @@@  @@@@@@@@   @@@@@@@  @@@@@@@   @@@@@@   
+@@@@@@@@  @@@@@@@@  @@@@@@@@       @@@  @@@@@@@@  @@@@@@@@  @@@@@@@  @@@@@@@   
+@@!  @@@  @@!  @@@  @@!  @@@       @@!  @@!       !@@         @@!    !@@       
+!@!  @!@  !@!  @!@  !@!  @!@       !@!  !@!       !@!         !@!    !@!       
+@!@@!@!   @!@!!@!   @!@  !@!       !!@  @!!!:!    !@!         @!!    !!@@!!    
+!!@!!!    !!@!@!    !@!  !!!       !!!  !!!!!:    !!!         !!!     !!@!!!   
+!!:       !!: :!!   !!:  !!!       !!:  !!:       :!!         !!:         !:!  
+:!:       :!:  !:!  :!:  !:!  !!:  :!:  :!:       :!:         :!:        !:!   
+ ::       ::   :::  ::::: ::  ::: : ::   :: ::::   ::: :::     ::    :::: ::   
+ :         :   : :   : :  :    : :::    : :: ::    :: :: :     :     :: : :    
+                                                                               `;
 ---
 
 <Layout>
-  <header class="absolute top-0 left-0 w-full z-10">
-    <NavBar title="portfolio/projects" button="home" />
+  <header class="top-0 left-0 w-full z-10">
+    <NavBar title="portfolio/other" button="home" />
   </header>
 
-  <main
-    class="w-full min-h-screen flex justify-center items-center px-4 md:px-0"
-  >
-    <div>projects</div>
+  <main class="w-full min-h-screen flex justify-center px-4 md:px-0">
+    <div class="mt-2 w-3/5">
+      <div class="mb-5 flex justify-center w-full">
+        <pre
+          class="font-mono text-[1vw] md:text-[0.8vw] lg:text-[0.6vw] leading-[1] whitespace-pre text-[#9ECE6A] select-none antialiased">
+
+{ascii}
+
+        </pre>
+      </div>
+      <div
+        class="font-mono grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 w-full"
+      >
+        <a
+          href="/projects/CCApp"
+          class="flex flex-col h-42 border-[#9777D0] border-2 rounded-lg bg-neutral-200 dark:bg-tokyo-bgDark hover:opacity-80 hover:dark:bg-neutral-900 hover:bg-neutral-400 duration-300 ease-out p-4"
+        >
+          <p class="font-[900] text-[#F7768E] mb-1">CCApp</p>
+
+          <div class="w-1/5 mb-2">
+            <hr class="border-[#9777D0] opacity-30" />
+          </div>
+
+          <p class="text-sm">Simple gestion app for spanish brotherhoods.</p>
+
+          <div class="flex gap-4 mt-auto text-xs font-bold text-[#7AA2F7]">
+            <span class="underline decoration-dotted">Google Play.</span>
+            <span class="underline decoration-dotted">Apple Store.</span>
+          </div>
+        </a>
+      </div>
+    </div>
     <BottomBar />
   </main>
 </Layout>
