@@ -11,18 +11,12 @@ importers:
       '@astrojs/react':
         specifier: ^4.4.2
         version: 4.4.2(@types/node@25.1.0)(@types/react-dom@19.2.3(@types/react@19.2.10))(@types/react@19.2.10)(jiti@2.6.1)(lightningcss@1.30.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@fontsource/space-mono':
-        specifier: ^5.2.9
-        version: 5.2.9
       '@iconify-json/material-symbols':
         specifier: ^1.2.53
         version: 1.2.53
       '@iconify-json/simple-icons':
         specifier: ^1.2.69
         version: 1.2.69
-      '@iconify/react':
-        specifier: ^6.0.2
-        version: 6.0.2(react@19.2.4)
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.1.16
         version: 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.10))(@types/react@19.2.10)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -380,9 +374,6 @@ packages:
   '@floating-ui/utils@0.2.10':
     resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
 
-  '@fontsource/space-mono@5.2.9':
-    resolution: {integrity: sha512-b61faFOHEISQ/pD25G+cfGY9o/WW6lRv6hBQQfpWvEJ4y1V+S4gmth95EVyBE2VL3qDYHeVQ8nBzrplzdXTDDg==}
-
   '@iconify-json/material-symbols@1.2.53':
     resolution: {integrity: sha512-2jXBKFdNzL9zy6chnJqubykL9WZno7rEP6/isSzpp6fKJJMXXhRtVkaGw1Clle0RlXGWzVkd/eiYUH8f9/ILrQ==}
 
@@ -391,11 +382,6 @@ packages:
 
   '@iconify-json/simple-icons@1.2.69':
     resolution: {integrity: sha512-T/rhy5n7pzE0ZOxQVlF68SNPCYYjRBpddjgjrJO5WWVRG8es5BQmvxIE9kKF+t2hhPGvuGQFpXmUyqbOtnxirQ==}
-
-  '@iconify/react@6.0.2':
-    resolution: {integrity: sha512-SMmC2sactfpJD427WJEDN6PMyznTFMhByK9yLW0gOTtnjzzbsi/Ke/XqsumsavFPwNiXs8jSiYeZTmLCLwO+Fg==}
-    peerDependencies:
-      react: '>=16'
 
   '@iconify/tools@4.2.0':
     resolution: {integrity: sha512-WRxPva/ipxYkqZd1+CkEAQmd86dQmrwH0vwK89gmp2Kh2WyyVw57XbPng0NehP3x4V1LzLsXUneP1uMfTMZmUA==}
@@ -2892,8 +2878,6 @@ snapshots:
 
   '@floating-ui/utils@0.2.10': {}
 
-  '@fontsource/space-mono@5.2.9': {}
-
   '@iconify-json/material-symbols@1.2.53':
     dependencies:
       '@iconify/types': 2.0.0
@@ -2905,11 +2889,6 @@ snapshots:
   '@iconify-json/simple-icons@1.2.69':
     dependencies:
       '@iconify/types': 2.0.0
-
-  '@iconify/react@6.0.2(react@19.2.4)':
-    dependencies:
-      '@iconify/types': 2.0.0
-      react: 19.2.4
 
   '@iconify/tools@4.2.0':
     dependencies:
